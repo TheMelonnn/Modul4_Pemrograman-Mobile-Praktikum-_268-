@@ -15,9 +15,12 @@ dependencies:
   http: ^1.1.0
   #webview
   webview_flutter: ^4.4.1
+
   firebase_core: ^2.22.0
   firebase_auth: ^4.7.3
   google_fonts: ^6.1.0
+  firebase_messaging: ^14.6.6
+  flutter_local_notifications: ^15.1.0+1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
