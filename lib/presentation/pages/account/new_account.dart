@@ -1,10 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:module_app/presentation/controllers/home_controller.dart';
-import 'package:module_app/presentation/pages/account/account.dart';
 import 'package:module_app/presentation/routes/routes.dart';
 
 import '../../controllers/auth_controller.dart';
@@ -24,6 +21,8 @@ class UserProfile extends GetView<HomeController> {
         ),
       ),
       body: Center(
+          child: Container(
+            color: const Color(0xFF13131B),
         child: ListView(
           children: <Widget>[
             SizedBox(height: 40),
@@ -38,7 +37,7 @@ class UserProfile extends GetView<HomeController> {
             Text(
               'User',
               style: GoogleFonts.roboto(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -47,13 +46,13 @@ class UserProfile extends GetView<HomeController> {
             SizedBox(height: 10),
             Text(
               'email@gmail.com',
-              style: GoogleFonts.roboto(fontSize: 18, color: Colors.black),
+              style: GoogleFonts.roboto(fontSize: 18, color: Colors.white),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 10),
             Text(
               'Indonesia',
-              style: GoogleFonts.roboto(fontSize: 18, color: Colors.black),
+              style: GoogleFonts.roboto(fontSize: 18, color: Colors.white),
               textAlign: TextAlign.center,
             ),
             SizedBox(
@@ -77,13 +76,12 @@ class UserProfile extends GetView<HomeController> {
               ),
               onPressed: () {
                 _authController.logout();
-
               },
               child: const Text('Logout'),
             ),
           ],
         ),
-      ),
+      )),
     );
   }
 }
